@@ -1,0 +1,26 @@
+.ConnectButtonWrapper {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+}
+
+.Header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 80px;
+    width: 100%;
+}
+
+.Body {
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    height: calc(100% - 80px);
+    width: 100%;
+}
+
+.Logo {
+    height: 80px;
+    width: 80px;
+}

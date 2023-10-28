@@ -6,6 +6,7 @@ import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { polygonMumbai } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { injectedWallet, metaMaskWallet } from '@rainbow-me/rainbowkit/wallets';
+import Logo from "./assets/logo512.png";
 
 const { chains, publicClient } = configureChains(
   [polygonMumbai],
@@ -41,19 +42,25 @@ const locks = await service.locks(
 
 function App() {
   return (
-    <>
-      <WagmiConfig config={wagmiConfig}>
-        <RainbowKitProvider chains={chains}>
-          <ConnectButton label="Connect Wallet" />
+    <WagmiConfig config={wagmiConfig}>
+      <RainbowKitProvider chains={chains}>
+        <div className='Header'>
+          <img className='Logo' src={Logo} />
+          <div className='ConnectButtonWrapper'><ConnectButton label="Connect Wallet" /></div>
+        </div>
+        <div className='Body'>
           {locks.map((lock) => (
             <div key={lock.address}>
               <h1>{lock.name}</h1>
               <p>{lock.address}</p>
             </div>
           ))}
-        </RainbowKitProvider>
-      </WagmiConfig>
-    </>
+        </div>
+        {/* <div class="card">
+          E
+        </div> */}
+      </RainbowKitProvider>
+    </WagmiConfig>
   );
 }
 
