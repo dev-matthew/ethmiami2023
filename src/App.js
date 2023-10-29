@@ -35,7 +35,8 @@ const service = new SubgraphService();
 const locks = await service.locks(
   {
     where: {
-      address: "0x28ad99fc6ef248351de677b75a71dc96b6ca2e8a"
+      address: "0x2f95e08c56bb60ac1dad47c7686f3fb41c6259eb",
+      //name_contains_nocase: "Test-Lock"
     }
   }
 );
@@ -46,19 +47,26 @@ function App() {
       <RainbowKitProvider chains={chains}>
         <div className='Header'>
           <img className='Logo' src={Logo} />
+          <span className='Title'>Title</span>
           <div className='ConnectButtonWrapper'><ConnectButton label="Connect Wallet" /></div>
         </div>
         <div className='Body'>
-          {locks.map((lock) => (
-            <div key={lock.address}>
-              <h1>{lock.name}</h1>
-              <p>{lock.address}</p>
+          <div className='User'>
+            <div className='UserNav'>
+              <div className='Slider'></div>
+              <span className='Available' onClick={() => console.log("test")}>Available Listings</span>
+              <span className='My'>My Properties</span>
             </div>
-          ))}
+            <div className='AvailableListings'>
+              {locks.map((lock) => (
+                <div className="Listing" key={lock.address}>
+                  <h1 className="ListingTitle">{lock.name}</h1>
+                  <p className="ListingAddress">{lock.address}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        {/* <div class="card">
-          E
-        </div> */}
       </RainbowKitProvider>
     </WagmiConfig>
   );

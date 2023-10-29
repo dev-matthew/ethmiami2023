@@ -8,19 +8,97 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    height: 80px;
+    height: 100px;
     width: 100%;
 }
 
 .Body {
     position: fixed;
-    top: 80px;
+    top: 100px;
     left: 0px;
-    height: calc(100% - 80px);
+    height: calc(100% - 100px);
     width: 100%;
 }
 
 .Logo {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
+    padding: 20px;
+}
+
+.Title {
+    position: fixed;
+    top: 30px;
+    left: 100px;
+    font-size: 32px;
+}
+
+.UserNav {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    background-color: rgba(0,0,0,0.05);
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    color: rgba(0,0,0,0.75);
+}
+
+.Slider {
+    height: 40px;
+    position: absolute;
+    width: 220px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    transition: 0.2s;
+    left: 0px;
+}
+
+.Available {
+    position: relative;
+    top: 8px;
+    left: 50px;
+    user-select: none;
+}
+
+.Available:hover {
+    cursor: pointer;
+}
+
+.My {
+    position: relative;
+    top: 8px;
+    left: 130px;
+    user-select: none;
+}
+
+.My:hover {
+    cursor: pointer;
+}
+
+.AvailableListings {
+    background-color: rgba(0,0,0,0.03);
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    height: 750px;
+    overflow-y: scroll;
+}
+
+.Listing {
+    margin-top: -10px;
+    position: relative;
+    left: 10px;
+    background-color: white;
+    width: calc(100% - 20px);
+    height: 250px;
+    border-radius: 10px;
+}
+
+.ListingTitle {
+    position: absolute;
+    left: 500px;
+    top: 20px;
 }
