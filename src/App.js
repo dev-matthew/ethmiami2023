@@ -42,8 +42,12 @@ const temp = await service.locks(
 var locks = [];
 for (let i = 0; i < temp.length; i += 1) {
   locks.push(JSON.parse(JSON.parse(temp[i].name.replace(/(?:\\[rn])+/g, ''))));
+  console.log(temp[i]);
   console.log(locks[i]);
 }
+
+// THE TWO VALUES BELOW ARE IN ADDITION TO THE ONE LOCK WE ALREADY CREATED ABOVE
+
 locks.push({
   "Address": "14360 SW 172nd St, Miami, FL 33177",
   "Description": "Amazing opportunity3/2-bathroom promises an inviting living experience in a coveted location. With close proximity to local markets, major highways, and nestled in a warm and friendly neighborhood, Call or text  for showing instructions.NO ASSOCIATION! The motivated Seller .SALE As Is.",
