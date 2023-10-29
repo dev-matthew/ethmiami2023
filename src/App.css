@@ -33,72 +33,111 @@
     font-size: 32px;
 }
 
-.UserNav {
-    position: relative;
-    left: 20px;
-    top: 20px;
-    background-color: rgba(0,0,0,0.05);
-    width: 400px;
-    height: 40px;
-    border-radius: 10px;
-    color: rgba(0,0,0,0.75);
-}
-
-.Slider {
-    height: 40px;
-    position: absolute;
-    width: 220px;
-    background-color: rgba(0,0,0,0.05);
-    border-radius: 10px;
-    transition: 0.2s;
-    left: 0px;
-}
-
-.Available {
-    position: relative;
-    top: 8px;
-    left: 50px;
-    user-select: none;
-}
-
-.Available:hover {
-    cursor: pointer;
-}
-
-.My {
-    position: relative;
-    top: 8px;
-    left: 130px;
-    user-select: none;
-}
-
-.My:hover {
-    cursor: pointer;
-}
-
 .AvailableListings {
-    background-color: rgba(0,0,0,0.03);
+    background-color: #FFFAF8;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 20px;
-    border-radius: 10px;
+    border-radius: 16px;
     width: calc(100% - 40px);
     height: 750px;
     overflow-y: scroll;
 }
 
 .Listing {
-    margin-top: -10px;
+    margin-top: 20px;
     position: relative;
-    left: 10px;
+    left: 20px;
     background-color: white;
-    width: calc(100% - 20px);
-    height: 250px;
-    border-radius: 10px;
+    width: calc(100% - 40px);
+    height: 300px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 100px 5px rgba(255,91,25,0.1);
+}
+
+.ListingImage {
+    position: absolute;
+    width: 435px;
+    height: 260px;
+    top: 20px;
+    left: 20px;
+    border-radius: 16px;
 }
 
 .ListingTitle {
     position: absolute;
     left: 500px;
     top: 20px;
+}
+
+.ListingDescription {
+    position: absolute;
+    left: 500px;
+    top: 80px;
+}
+
+.ListingTotal {
+    position: absolute;
+    left: 500px;
+    top: 230px;
+}
+
+.ListingDown {
+    position: absolute;
+    left: 650px;
+    top: 230px;
+}
+
+.ListingMonthly {
+    position: absolute;
+    left: 870px;
+    top: 230px;
+}
+
+.ListingInterest {
+    position: absolute;
+    left: 1100px;
+    top: 230px;
+}
+
+.ListingDuration {
+    position: absolute;
+    left: 1280px;
+    top: 230px;
+}
+
+.ListingPurchase {
+    position: absolute;
+    right: 40px;
+    top: 230px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    background-color: rgba(255,91,25,1);
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    transition: all 0.3s;
+}
+
+.ListingPurchase:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.ListingZillow {
+    position: absolute;
+    top: 45px;
+    right: 30px;
+}
+
+.AvailableListingsTitle {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.8);
 }
